@@ -2,8 +2,13 @@
 
 <form class="search-form" id="search-form">
   <input type="text" name="query" autocomplete="off" placeholder="Search images..." class="input" />
+  <button type="submit" class="search-btn btn">Search</button>
 </form>
+
+<p class="no-result is-hidden">Sorry, no results were found.</p>
 
 <ul class="gallery">
   <!-- Список <li> с карточками изображений -->
 </ul>
+
+<button type="button" class="btn is-hidden" data-action="load-more">Load more</button>
