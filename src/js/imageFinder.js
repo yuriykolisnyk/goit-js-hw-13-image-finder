@@ -1,5 +1,6 @@
 import ImageApiService from './apiService.js';
 import imageCard from '../templates/imageCard.hbs';
+import { onOpenModal } from './openModal.js';
 
 import { info, error } from '@pnotify/core';
 import '@pnotify/core/dist/PNotify.css';
@@ -12,6 +13,7 @@ const loadMoreBtn = document.querySelector('[data-action="load-more"]');
 
 formSearch.addEventListener('submit', onSearch);
 loadMoreBtn.addEventListener('click', onLoadMore);
+articlesContainer.addEventListener('click', onOpenModal);
 
 const imageApiService = new ImageApiService();
 
