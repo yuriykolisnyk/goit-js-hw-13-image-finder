@@ -62,7 +62,7 @@ async function onSearch(event) {
 async function onLoadMore() {
   try {
     const response = await imageApiService.fetchImages();
-    console.log(response);
+    // console.log(response);
 
     appendArticlesMarkup(response);
     btnScrollElem();
