@@ -8,7 +8,7 @@ import '@pnotify/core/dist/BrightTheme.css';
 
 const formSearch = document.querySelector('#search-form');
 const articlesContainer = document.querySelector('.gallery');
-const input = document.querySelector('.input');
+const inputSearch = document.querySelector('.input');
 const loadMoreBtn = document.querySelector('[data-action="load-more"]');
 
 formSearch.addEventListener('submit', onSearch);
@@ -20,7 +20,7 @@ const imageApiService = new ImageApiService();
 async function onSearch(event) {
   event.preventDefault();
 
-  if (input.value.trim() === '') {
+  if (inputSearch.value.trim() === '') {
     info({
       text: 'Please try again!',
       delay: 2000,
@@ -55,7 +55,7 @@ async function onSearch(event) {
       loadMoreBtn.classList.add('is-hidden');
     }
   } catch (error) {
-    console.log('Error');
+    console.log('Error onSearch');
   }
 }
 
@@ -67,7 +67,7 @@ async function onLoadMore() {
     appendArticlesMarkup(response);
     btnScrollElem();
   } catch (error) {
-    console.log('Error');
+    console.log('Error onLoadMore');
   }
 }
 

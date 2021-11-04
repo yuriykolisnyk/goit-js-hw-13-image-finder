@@ -57,8 +57,9 @@ img {
 }
 
 .photo-img {
+  cursor: pointer;
   height: 200px;
-  width: 100%;
+  width: 300px;
   object-fit: cover;
 }
 
